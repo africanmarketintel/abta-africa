@@ -27,9 +27,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .btns{display:flex;flex-wrap:wrap;gap:12px}.btns .btn{flex:1 1 200px}
 /* support bar */
 .topbar{background:var(--indigo);color:#fff}
-.topbar .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;padding-top:10px;padding-bottom:10px}
-.topbar b{font-size:18px;display:block}.topbar span{font-size:14px;line-height:1.4;display:block}
-.topbar .t{flex:1 1 260px}.topbar .btn{flex:0 0 auto;min-height:44px;padding:8px 20px}
+.topbar .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;padding-top:12px;padding-bottom:12px}
+.topbar b{font-size:22px;font-weight:700;line-height:1.25;display:block}.topbar span{font-size:16px;line-height:1.4;display:block}
+.topbar .t{flex:0 1 auto}.topbar .btn{flex:0 0 auto;min-height:36px;padding:6px 22px;font-size:15px;background:#E8A73A;color:#333}.topbar .btn:hover{background:#f0b24a}
 /* header */
 header.site{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:12px}
@@ -150,7 +150,7 @@ footer.site .small{border-top:1px solid rgba(255,255,255,.25);margin-top:28px;pa
 @media(min-width:960px){.chips{display:none}}
 details.more{border:0}details.more summary{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .card.flex details.more{margin-bottom:16px}
-@media(max-width:639px){.topbar .t span{display:none}.topbar .wrap{flex-wrap:nowrap;justify-content:space-between;padding-top:8px;padding-bottom:8px}.topbar .t{flex:1 1 auto}.topbar .btn{padding:8px 16px}.card{padding:18px}.stat{font-size:32px}}
+@media(max-width:639px){.topbar b{font-size:18px}.topbar .t span{display:none}.topbar .wrap{flex-wrap:nowrap;justify-content:space-between;padding-top:8px;padding-bottom:8px}.topbar .t{flex:1 1 auto}.topbar .btn{padding:6px 16px}.card{padding:18px}.stat{font-size:32px}}
 
 .was{color:#777;font-size:.92em;white-space:nowrap}
 .saveline{margin:-4px 0 12px;color:var(--ink)}
@@ -256,3 +256,5 @@ details.more{border:0}details.more summary{border-top:1px solid var(--line);bord
 @media(max-width:800px){.pt .pv{max-height:380px}.pt .pv:has(.br){max-height:240px}}
 .pt .pv{margin-top:0}.pt .pb{margin-bottom:32px}
 .pt .pv:has(.ph){margin-bottom:-6px}
+.rt.rv{background-image:var(--bg),linear-gradient(135deg,#1A237E,#4a54b8);background-size:cover;background-position:var(--bx,50%) center}
+.rt .play{top:55%}
