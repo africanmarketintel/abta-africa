@@ -3,8 +3,7 @@
 
    To switch analytics off everywhere: set GA_MEASUREMENT_ID to ''.
    To use a separate Google Analytics property for this site: replace the ID below.
-   Model: visitors outside Europe see a notice and can turn analytics off; analytics loads straight away.
-   Visitors whose device time zone is in Europe (the EEA, the UK and Switzerland) are asked first and nothing loads until they accept.
+   Model: every visitor, in Europe and elsewhere, is asked first. Nothing loads until "Accept" is pressed.
    The choice is remembered for 180 days on this site. Advertising signals are always off. */
 (function () {
   'use strict';
@@ -84,17 +83,17 @@
     n.className = 'abta-cookie';
     n.setAttribute('role', 'region');
     n.setAttribute('aria-label', 'Analytics cookies');
-    n.innerHTML = '<p>' + (ask ? 'We would like to use third-party tools to understand how visitors use the site and to improve its content. ' : 'We use third-party tools to understand how visitors use the site and to improve its content. ')
+    n.innerHTML = '<p>' + 'We use third-party tools to understand how visitors use the site and to improve its content. '
       + '<a href="' + PRIVACY_URL + '">Privacy</a></p>'
-      + '<button type="button" class="ok">' + (ask ? 'Accept' : 'OK') + '</button>'
-      + '<button type="button" class="no">' + (ask ? 'Decline' : 'Turn off') + '</button>';
+      + '<button type="button" class="ok">' + 'Accept' + '</button>'
+      + '<button type="button" class="no">' + 'Decline' + '</button>';
     n.querySelector('.ok').addEventListener('click', accept);
     n.querySelector('.no').addEventListener('click', decline);
     document.body.appendChild(n);
     document.body.style.paddingBottom = n.offsetHeight + 'px';
   }
   function start() {
-    var c = choice(), ask = europe();
+    var c = choice(), ask = true; /* every visitor is asked first, in Europe and elsewhere */
     if (c === 'granted' || (c === null && !ask)) load();
     if (c === null) note(ask);
   }
