@@ -84,7 +84,7 @@
     n.className = 'abta-cookie';
     n.setAttribute('role', 'region');
     n.setAttribute('aria-label', 'Analytics cookies');
-    n.innerHTML = '<p>' + (ask ? 'ABTA would like to use analytics cookies to count visits and improve the site. ' : 'ABTA uses analytics to count visits and improve the site. ')
+    n.innerHTML = '<p>' + (ask ? 'We would like to use third-party tools to understand how visitors use the site and to improve its content. ' : 'We use third-party tools to understand how visitors use the site and to improve its content. ')
       + '<a href="' + PRIVACY_URL + '">Privacy</a></p>'
       + '<button type="button" class="ok">' + (ask ? 'Accept' : 'OK') + '</button>'
       + '<button type="button" class="no">' + (ask ? 'Decline' : 'Turn off') + '</button>';
