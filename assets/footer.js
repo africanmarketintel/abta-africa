@@ -19,4 +19,6 @@ var h='<footer class="site"><div class="wrap"><div class="cols">'
  +'</div><div class="small">'+SMALL+'<br>'+SMALL_LINKS.map(function(l){return '<a href="'+l[1]+'">'+l[0]+'</a>'}).join(' &middot; ')+'</div></div></footer>';
 var s=document.currentScript;
 if(s)s.insertAdjacentHTML('beforebegin',h);
+/* Analytics: loaded here so every page gets it from one place. Settings are in assets/analytics.js */
+var ga=document.createElement('script');ga.src='/assets/analytics.js';ga.defer=true;document.head.appendChild(ga);
 })();
